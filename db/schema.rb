@@ -12,26 +12,22 @@
 
 ActiveRecord::Schema.define(version: 3) do
 
-  create_table "trails", force: :cascade do |t|
-    t.integer "trail_id"
-    t.string  "trail_name"
-    t.integer "trail_length"
-    t.string  "trail_intensity"
-    t.string  "trail_duration"
-    t.string  "description"
-    t.float   "latitude"
-    t.float   "longitude"
+  create_table "parks", force: :cascade do |t|
+    t.integer "park_id"
+    t.string  "park_name"
+    t.string  "state_code"
+    t.string  "weather_info"
+    t.string  "park_hours"
+  end
+
+  create_table "user_parks", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "park_id"
   end
 
   create_table "users", force: :cascade do |t|
     t.integer "user_id"
     t.string  "user_name"
-    t.string  "user_email"
-  end
-
-  create_table "users_trails", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "trail_id"
   end
 
 end
