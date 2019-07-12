@@ -5,13 +5,14 @@ def greet
         # name = gets.chomp
         # user = User.find_or_create_by(user_name: name)
         # puts "Welcome #{name}"
-        puts
 end
 
 def gets_state_from_user
         puts
         puts "We can help you find information about national parks."
+        puts
         puts "Please enter the two-character state code of your desired state here:"
+        puts
         state = gets.chomp
         return state
         puts
