@@ -13,11 +13,10 @@
 ActiveRecord::Schema.define(version: 3) do
 
   create_table "parks", force: :cascade do |t|
-    t.integer "park_id"
-    t.string  "park_name"
-    t.string  "state_code"
-    t.string  "weather_info"
-    t.string  "park_hours"
+    t.string "park_name"
+    t.string "state_code"
+    t.string "weather_info"
+    t.string "park_url"
   end
 
   create_table "user_parks", force: :cascade do |t|
@@ -26,8 +25,7 @@ ActiveRecord::Schema.define(version: 3) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.integer "user_id"
-    t.string  "user_name"
+    t.string "user_name"
   end
 
 end

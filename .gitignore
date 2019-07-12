@@ -1,6 +1,6 @@
 .DS_Store
 .idea
-config/environment.rb
+.config/API_key.rb
 
 log
 node_modules
